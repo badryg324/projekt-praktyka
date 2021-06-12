@@ -39,6 +39,9 @@ dependencies {
     implementation group: 'org.openjfx', name: 'javafx-fxml', version: '15.0.1', classifier: platform
     implementation group: 'org.openjfx', name: 'javafx-web', version: '15.0.1', classifier: platform
 
+    implementation group: 'io.reactivex.rxjava2', name: 'rxjavafx', version: '2.11.0-RC27'
+    implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.21'
+
     testImplementation 'org.assertj:assertj-core:3.18.1'
 }
 

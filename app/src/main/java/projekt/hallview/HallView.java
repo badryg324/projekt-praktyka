@@ -1,24 +1,17 @@
 package projekt.hallview;
 
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import org.checkerframework.checker.units.qual.C;
-import projekt.loginview.LoginViewModel;
 
 public class HallView {
-    public HallView(HallViewModel viewModel, Stage stage) {
+    public HallView(HallViewModel viewModel, Stage stage)  {
 
         Label checkField= new Label();
         //PasswordField passwordField = new PasswordField();
-
         Button logout = new Button("Logout");
         Button exitButton = new Button("Exit");
         Button returnButton = new Button("Return");
@@ -138,8 +131,9 @@ public class HallView {
         layout.setSpacing(5);
         layout.getChildren().addAll(menu,checkField,center);
 
-
-        stage.setScene(new Scene(layout));
+        Scene hallScene = new Scene(layout);
+        hallScene.getStylesheets().add("css/hall-view-style.css");
+        stage.setScene(hallScene);
         stage.show();
 
 

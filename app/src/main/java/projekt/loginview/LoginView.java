@@ -19,6 +19,8 @@ public class LoginView {
     public LoginView(LoginViewModel viewModel, Stage stage) {
         TextField usernameTextField = new TextField();
         PasswordField passwordField = new PasswordField();
+        Label usernameHintLabel = new Label();
+        Label passwordHintLabel = new Label();
         Button loginButton = new Button("Login");
         Button cancelButton = new Button("Cancel");
 
@@ -29,6 +31,14 @@ public class LoginView {
         passwordField.textProperty().bindBidirectional(viewModel.passwordProperty());
         passwordField.disableProperty().bind(viewModel.cannotChangePassword());
 
+        usernameHintLabel.textProperty().bind(viewModel.usernameHint());
+        usernameHintLabel.visibleProperty().bind(viewModel.shouldShowUsernameHint());
+        usernameHintLabel.managedProperty().bind(viewModel.shouldShowUsernameHint());
+
+        passwordHintLabel.textProperty().bind(viewModel.passwordHint());
+        passwordHintLabel.visibleProperty().bind(viewModel.shouldShowPasswordHint());
+        passwordHintLabel.managedProperty().bind(viewModel.shouldShowPasswordHint());
+
         loginButton.disableProperty().bind(viewModel.cannotLogin());
         loginButton.setOnAction(event -> viewModel.loginClicked());
 
@@ -36,8 +46,8 @@ public class LoginView {
 
         // Layout i ustawienie
         GridPane formLayout = new GridPane();
-        formLayout.addRow(formLayout.getRowCount(), new Label("Username:"), usernameTextField);
-        formLayout.addRow(formLayout.getRowCount(), new Label("Password:"), passwordField);
+        formLayout.addRow(formLayout.getRowCount(), new Label("Username:"), new VBox(usernameTextField, usernameHintLabel));
+        formLayout.addRow(formLayout.getRowCount(), new Label("Password:"), new VBox(passwordField, passwordHintLabel));
         formLayout.setHgap(5);
         formLayout.setVgap(5);
 

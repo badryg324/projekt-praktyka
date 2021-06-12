@@ -18,6 +18,7 @@ public class HallView {
 
         Button buyTicket = new Button("Buy Ticket");
         Button goFuckYourSelf = new Button("NWM");
+        Label test = new Label("TEST");
 
 
         // Binding z danymi z ViewModel'u
@@ -31,7 +32,8 @@ public class HallView {
         //loginButton.setOnAction(event -> viewModel.loginClicked());
 
         //cancelButton.setOnAction(event -> viewModel.cancelLoginClicked());
-
+        test.visibleProperty().bind(viewModel.isAdmin);
+        test.managedProperty().bind(viewModel.isAdmin);
         // Layout i ustawienie
         GridPane formLayout = new GridPane();
 
@@ -113,9 +115,10 @@ public class HallView {
 
 
 
+
         //
         HBox menu = new HBox();
-        menu.getChildren().addAll(returnButton,exitButton, logout);
+        menu.getChildren().addAll(returnButton,exitButton, logout,test);
 
 
         VBox rightBar = new VBox();

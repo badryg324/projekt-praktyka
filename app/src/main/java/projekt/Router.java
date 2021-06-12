@@ -32,6 +32,6 @@ public class Router {
 
     public void showMoviesListView() {
         Stage otherWindow = new Stage();
-        moviesListViewFactory.create(new HallViewModel(), mainWindowStage);
+        moviesListViewFactory.create(new HallViewModel(loginViewFactory.userAuthenticator.isAdmin), mainWindowStage);
     }
 }

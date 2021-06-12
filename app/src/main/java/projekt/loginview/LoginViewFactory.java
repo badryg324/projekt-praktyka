@@ -4,7 +4,7 @@ import javafx.stage.Stage;
 import projekt.authentication.UserAuthentiactor;
 
 public class LoginViewFactory {
-    private final UserAuthentiactor userAuthenticator;
+    public final UserAuthentiactor userAuthenticator;
 
     public LoginViewFactory(UserAuthentiactor userAuthenticator) {
         this.userAuthenticator = userAuthenticator;

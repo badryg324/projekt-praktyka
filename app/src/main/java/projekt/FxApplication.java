@@ -2,26 +2,37 @@ package projekt;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import projekt.hallview.HallView;
+import projekt.authentication.UserAuthentiactor;
 import projekt.hallview.HallViewFactory;
-import projekt.hallview.HallViewModel;
 import projekt.loginview.LoginView;
 import projekt.loginview.LoginViewFactory;
 import projekt.loginview.LoginViewModel;
 
 
 public class    FxApplication extends Application {
+    private final Router router;
+    public FxApplication(){
+        UserAuthentiactor userAuthenticator = new UserAuthentiactor();
+
+        router = new Router(
+                new LoginViewFactory(userAuthenticator),new HallViewFactory()
+        );
+    }
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //LoginViewFactory loginViewFactory = new LoginViewFactory();
-        //LoginViewModel viewModel = new LoginViewModel();
 
-        //LoginView loginView = loginViewFactory.create(viewModel, primaryStage);
+        router.setMainWindowStage(primaryStage);
+        router.showLoginView();
 
-        HallViewFactory hallViewFactory = new HallViewFactory();
+       /* LoginViewFactory loginViewFactory = new LoginViewFactory(userAuthenticator);
+        LoginViewModel viewModel = new LoginViewModel(userAuthenticator, onUserAuthenticated);*/
+
+
+
+        /*HallViewFactory hallViewFactory = new HallViewFactory();
         HallViewModel viewModel = new HallViewModel();
 
-        HallView hallView = hallViewFactory.create(viewModel, primaryStage);
+        HallView hallView = hallViewFactory.create(viewModel, primaryStage);*/
 
     }
 }

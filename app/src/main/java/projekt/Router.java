@@ -1,18 +1,19 @@
 package projekt;
 
 import javafx.stage.Stage;
-import projekt.hallview.HallView;
 import projekt.hallview.HallViewFactory;
 import projekt.hallview.HallViewModel;
 import projekt.loginview.LoginViewFactory;
+import projekt.movielistview.MovieListViewFactory;
+import projekt.movielistview.MovieListViewModel;
 
 public class Router {
     private final LoginViewFactory loginViewFactory;
-    private final HallViewFactory moviesListViewFactory;
+    private final MovieListViewFactory moviesListViewFactory;
 
     private Stage mainWindowStage;
 
-    public Router(LoginViewFactory loginViewFactory, HallViewFactory moviesListViewFactory) {
+    public Router(LoginViewFactory loginViewFactory, MovieListViewFactory moviesListViewFactory) {
         this.loginViewFactory = loginViewFactory;
         this.moviesListViewFactory = moviesListViewFactory;
     }
@@ -32,6 +33,6 @@ public class Router {
 
     public void showMoviesListView() {
         Stage otherWindow = new Stage();
-        moviesListViewFactory.create(new HallViewModel(loginViewFactory.userAuthenticator.isAdmin), mainWindowStage);
+        moviesListViewFactory.create(new MovieListViewModel(loginViewFactory.userAuthenticator.isAdmin), mainWindowStage);
     }
 }

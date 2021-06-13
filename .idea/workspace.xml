@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f504f92b-3bba-4dd4-8c6c-0030a70a032e" name="Default Changelist" comment="added admin check">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" afterDir="false" />
+    <list default="true" id="f504f92b-3bba-4dd4-8c6c-0030a70a032e" name="Default Changelist" comment="added some stuff">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,19 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="projekt-praktyka:app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -157,11 +134,16 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.FxApplicationRunner" />
+      <item itemvalue="Application.UserAuthentiactor" />
+      <item itemvalue="Gradle.projekt-praktyka:app [clean]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FxApplicationRunner" />
         <item itemvalue="Gradle.projekt-praktyka:app [clean]" />
         <item itemvalue="Application.UserAuthentiactor" />
-        <item itemvalue="Application.FxApplicationRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -177,6 +159,8 @@
       <workItem from="1623519080609" duration="346000" />
       <workItem from="1623519820673" duration="735000" />
       <workItem from="1623520642850" duration="1705000" />
+      <workItem from="1623576694400" duration="74000" />
+      <workItem from="1623580244624" duration="1809000" />
     </task>
     <task id="LOCAL-00001" summary="added login">
       <created>1623513488702</created>

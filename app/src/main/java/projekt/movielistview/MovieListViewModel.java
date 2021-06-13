@@ -42,7 +42,7 @@ public class MovieListViewModel {
         readMovies();
 
 
-        cannotAddPosition=titleArea.isNull().or(directorArea.isNull()).or(hallArea.isNull()).or(dateArea.isNull());
+        cannotAddPosition=titleArea.isEmpty().or(directorArea.isEmpty()).or(hallArea.isEmpty()).or(dateArea.isEmpty());
 
 
 
@@ -51,7 +51,7 @@ public class MovieListViewModel {
 
     }
 
-    public StringProperty getAreaProperty() {
+    public StringProperty getTitleArea() {
         return titleArea;
     }
     public StringProperty getDirectorArea() {

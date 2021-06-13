@@ -1,27 +1,24 @@
 package projekt;
 
 import javafx.stage.Stage;
-import projekt.hallview.HallView;
 import projekt.hallview.HallViewFactory;
-import projekt.hallview.HallViewModel;
 import projekt.loginview.LoginViewFactory;
 import projekt.movielistview.MovieListViewFactory;
-import projekt.movielistview.MovieListViewModel;
-import projekt.utils.MovieTitle;
+import projekt.utils.Movie;
 
 public class Router {
     private final LoginViewFactory loginViewFactory;
     private final MovieListViewFactory moviesListViewFactory;
     private final HallViewFactory hallViewFactory;
-    private final MovieTitle movieTitle;
+    private final Movie movie;
 
     private Stage mainWindowStage;
 
-    public Router(LoginViewFactory loginViewFactory, MovieListViewFactory moviesListViewFactory, HallViewFactory hallViewFactory, MovieTitle movieTitle) {
+    public Router(LoginViewFactory loginViewFactory, MovieListViewFactory moviesListViewFactory, HallViewFactory hallViewFactory, Movie movie) {
         this.loginViewFactory = loginViewFactory;
         this.moviesListViewFactory = moviesListViewFactory;
         this.hallViewFactory = hallViewFactory;
-        this.movieTitle = movieTitle;
+        this.movie = movie;
     }
 
     public void setMainWindowStage(Stage mainWindow) {
@@ -42,7 +39,7 @@ public class Router {
             showHallView();
         };
         Stage otherWindow = new Stage();
-        moviesListViewFactory.create(mainWindowStage,loginViewFactory.userAuthenticator.isAdmin,movieTitle,onMovieSelected);
+        moviesListViewFactory.create(mainWindowStage,loginViewFactory.userAuthenticator.isAdmin, movie,onMovieSelected);
     }
 
     public void showHallView(){
@@ -50,6 +47,6 @@ public class Router {
             mainWindowStage.close();
             showHallView();
         };
-        hallViewFactory.create(mainWindowStage,movieTitle,onReturnToListClicked);
+        hallViewFactory.create(mainWindowStage, movie,onReturnToListClicked);
     }
 }

@@ -2,9 +2,6 @@ package projekt.movielistview;
 
 
 
-import io.reactivex.Completable;
-import io.reactivex.rxjavafx.schedulers.JavaFxScheduler;
-import io.reactivex.schedulers.Schedulers;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.*;
 import javafx.beans.value.ObservableValue;
@@ -15,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import projekt.utils.MovieTitle;
+import projekt.utils.Movie;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -27,7 +24,7 @@ public class MovieListViewModel {
     private final StringProperty directorArea;
     private final StringProperty hallArea ;
     private final StringProperty dateArea ;
-    private final MovieTitle movieTitle;
+    private final Movie movie;
     private final Runnable onMovieSelected;
     //private final ListProperty boxes;
 
@@ -39,9 +36,9 @@ public class MovieListViewModel {
     public ObservableList<Node> movieList = FXCollections.<Node>observableArrayList();
 
 
-    public MovieListViewModel(boolean isAdmin, MovieTitle movieTitle, Runnable onMovieSelected) {
+    public MovieListViewModel(boolean isAdmin, Movie movie, Runnable onMovieSelected) {
         this.isAdmin = new SimpleBooleanProperty(isAdmin);
-        this.movieTitle = movieTitle;
+        this.movie = movie;
         this.onMovieSelected = onMovieSelected;
         titleArea = new SimpleStringProperty();
         directorArea = new SimpleStringProperty();
@@ -131,7 +128,10 @@ public class MovieListViewModel {
 
                 Button openMovieButton = new Button("Rezerwuj");
                 String finalTitle = title;
-                openMovieButton.setOnAction(event ->openHallView(finalTitle));
+                String finalDirector = director;
+                String finalHall = hall;
+                String finalDate = date;
+                openMovieButton.setOnAction(event ->openHallView(finalTitle, finalDirector, finalHall, finalDate));
 
                 Button deleteButton = new Button("Delete");
                 deleteButton.visibleProperty().bind(isAdmin);
@@ -153,8 +153,11 @@ public class MovieListViewModel {
 
     }
 
-    private void openHallView(String title){
-        this.movieTitle.setValue(title);
+    private void openHallView(String title,String director, String hall, String date){
+        this.movie.setTitle(title);
+        this.movie.setDirector(director);
+        this.movie.setHall(hall);
+        this.movie.setDate(date);
         onMovieSelected.run();
     }
 

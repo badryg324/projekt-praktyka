@@ -4,11 +4,9 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import projekt.authentication.UserAuthentiactor;
 import projekt.hallview.HallViewFactory;
-import projekt.loginview.LoginView;
 import projekt.loginview.LoginViewFactory;
-import projekt.loginview.LoginViewModel;
 import projekt.movielistview.MovieListViewFactory;
-import projekt.utils.MovieTitle;
+import projekt.utils.Movie;
 
 
 public class    FxApplication extends Application {
@@ -17,7 +15,7 @@ public class    FxApplication extends Application {
         UserAuthentiactor userAuthenticator = new UserAuthentiactor();
 
         router = new Router(
-                new LoginViewFactory(userAuthenticator),new MovieListViewFactory(), new HallViewFactory(), new MovieTitle()
+                new LoginViewFactory(userAuthenticator),new MovieListViewFactory(), new HallViewFactory(), new Movie()
         );
     }
     @Override

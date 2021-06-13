@@ -1,18 +1,17 @@
 package movielistview;
 
-import junit.framework.TestCase;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import projekt.movielistview.MovieListViewModel;
-import projekt.utils.MovieTitle;
+import projekt.utils.Movie;
 
 public class MovieListViewModelTest {
 
     @Test
     public void AddPositionDontEnableWhenAllTextFieldsIsEmpty() {
         //given
-        MovieTitle movieTitle = new MovieTitle();
-        MovieListViewModel model = new MovieListViewModel(true,movieTitle ,() -> {});
+        Movie movie = new Movie();
+        MovieListViewModel model = new MovieListViewModel(true, movie,() -> {});
         //when
         model.getTitleArea().setValue("");
         model.getDirectorArea().setValue("");
@@ -24,8 +23,8 @@ public class MovieListViewModelTest {
     @Test
     public void AddPositionDontEnableWhenOneOfTheTextFieldsIsEmpty() {
         //given
-        MovieTitle movieTitle = new MovieTitle();
-        MovieListViewModel model = new MovieListViewModel(true,movieTitle ,() -> {});
+        Movie movie = new Movie();
+        MovieListViewModel model = new MovieListViewModel(true, movie,() -> {});
         //when
         model.getTitleArea().setValue("aaa");
         model.getDirectorArea().setValue("aaa");
@@ -38,8 +37,8 @@ public class MovieListViewModelTest {
     @Test
     public void AddPositionDontEnableWhenOneOfTheTextFieldsIsNull() {
         //given
-        MovieTitle movieTitle = new MovieTitle();
-        MovieListViewModel model = new MovieListViewModel(true,movieTitle ,() -> {});
+        Movie movie = new Movie();
+        MovieListViewModel model = new MovieListViewModel(true, movie,() -> {});
         //when
         model.getTitleArea().setValue("sdasd");
         model.getDirectorArea().setValue(null);

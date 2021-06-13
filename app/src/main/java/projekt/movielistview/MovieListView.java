@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -31,9 +32,12 @@ public class MovieListView {
         scene.getChildren().add(header);
 
         VBox movies = new VBox();
+        //scene.getChildren().add(movies);
 
-        scene.getChildren().add(movies);
-
+        ScrollPane moviesScrollPane = new ScrollPane();
+        moviesScrollPane.setContent(movies);
+        moviesScrollPane.setPrefHeight(400);
+        scene.getChildren().add(moviesScrollPane);
 
         VBox adminUsage = new VBox();
 
@@ -49,6 +53,7 @@ public class MovieListView {
 
         addPosition.disableProperty().bind(viewModel.cannotAddPosition());
         addPosition.setOnAction(event -> viewModel.addPosition());
+
 
 
         HBox adminVariables = new HBox();
@@ -67,8 +72,7 @@ public class MovieListView {
 
         scene.getChildren().add(adminUsage);
 
-        stage.setScene(new Scene(scene));
-        stage.show();
+
 
 
         // bindings
@@ -82,6 +86,11 @@ public class MovieListView {
 
 
         viewModel.readMovies();
+
+        stage.setScene(new Scene(scene));
+        stage.sizeToScene();
+        stage.setResizable(false);
+        stage.show();
 
     }
 

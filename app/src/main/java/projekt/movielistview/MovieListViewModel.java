@@ -109,7 +109,7 @@ public class MovieListViewModel {
         String date;
 
         String line;
-
+        int counter = 0;
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("app/src/main/resources/movieList.txt"), StandardCharsets.UTF_8)); //getClass().getResourceAsStream("/movieList.txt")
             while ((line = bufferedReader.readLine()) != null) {
@@ -128,8 +128,16 @@ public class MovieListViewModel {
                 String finalTitle = title;
                 openMovieButton.setOnAction(event ->openHallView(finalTitle));
 
-                movie.getChildren().addAll(openMovieButton, new Label(title), new Label(director), new Label(hall), new Label(date), new Button("Delete"));
+                Button deleteButton = new Button("Delete");
+                deleteButton.visibleProperty().bind(isAdmin);
+                deleteButton.managedProperty().bind(isAdmin);
+                int finalCounter = counter;
+                deleteButton.setOnAction(event -> deleteMovie(finalCounter));
+
+
+                movie.getChildren().addAll(openMovieButton, new Label(title), new Label(director), new Label(hall), new Label(date), deleteButton);
                 movieList.add(movie);
+                counter++;
 
             }
             bufferedReader.close();
@@ -143,6 +151,31 @@ public class MovieListViewModel {
     private void openHallView(String title){
         this.movieTitle.setValue(title);
         onMovieSelected.run();
+    }
+
+    private void deleteMovie(int lineNumber){
+        String line;
+        int counter = 0;
+        File newFile = new File("app/src/main/resources/new-movieList.txt");
+        try {
+            FileWriter fw=new FileWriter(newFile,StandardCharsets.UTF_8, true);
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("app/src/main/resources/movieList.txt"), StandardCharsets.UTF_8)); //getClass().getResourceAsStream("/movieList.txt")
+            while ((line = bufferedReader.readLine()) != null) {
+                if(counter!=lineNumber){
+                    fw.write(line+System.getProperty( "line.separator" ));
+                }
+                counter++;
+            }
+            bufferedReader.close();
+            fw.close();
+
+        } catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+        File oldFile = new File("app/src/main/resources/movieList.txt");
+        oldFile.delete();
+        newFile.renameTo(oldFile);
+        readMovies();
     }
 }
 

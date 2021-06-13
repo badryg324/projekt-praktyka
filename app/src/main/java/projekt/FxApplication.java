@@ -8,6 +8,7 @@ import projekt.loginview.LoginView;
 import projekt.loginview.LoginViewFactory;
 import projekt.loginview.LoginViewModel;
 import projekt.movielistview.MovieListViewFactory;
+import projekt.utils.MovieTitle;
 
 
 public class    FxApplication extends Application {
@@ -16,7 +17,7 @@ public class    FxApplication extends Application {
         UserAuthentiactor userAuthenticator = new UserAuthentiactor();
 
         router = new Router(
-                new LoginViewFactory(userAuthenticator),new MovieListViewFactory(), new HallViewFactory()
+                new LoginViewFactory(userAuthenticator),new MovieListViewFactory(), new HallViewFactory(), new MovieTitle()
         );
     }
     @Override

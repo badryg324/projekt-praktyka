@@ -74,7 +74,7 @@ public class MovieListView {
         // bindings
 
 
-        titleArea.textProperty().bindBidirectional(viewModel.getAreaProperty());
+        titleArea.textProperty().bindBidirectional(viewModel.getTitleArea());
         directorArea.textProperty().bindBidirectional(viewModel.getDirectorArea());
         hallArea.textProperty().bindBidirectional(viewModel.getHallArea());
         dateArea.textProperty().bindBidirectional(viewModel.getDateArea());

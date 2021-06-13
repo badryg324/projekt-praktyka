@@ -13,8 +13,8 @@ public class LoginViewModelTest {
         //given
         LoginViewModel model = new LoginViewModel(new UserAuthentiactor(),() -> {});
         //when
-        model.username().setValue("");
-        model.password().setValue("");
+        model.usernameProperty().setValue("");
+        model.passwordProperty().setValue("");
 
         //then
         Assertions.assertThat(model.cannotLogin().getValue()).isTrue();
@@ -25,8 +25,8 @@ public class LoginViewModelTest {
         //given
         LoginViewModel model = new LoginViewModel(new UserAuthentiactor(),() -> {});
         //when
-        model.username().setValue("user1");
-        model.password().setValue("");
+        model.usernameProperty().setValue("user1");
+        model.passwordProperty().setValue("");
 
         //then
         Assertions.assertThat(model.cannotLogin().getValue()).isTrue();
@@ -36,8 +36,8 @@ public class LoginViewModelTest {
         //given
         LoginViewModel model = new LoginViewModel(new UserAuthentiactor(),() -> {});
         //when
-        model.username().setValue("");
-        model.password().setValue("password1");
+        model.usernameProperty().setValue("");
+        model.passwordProperty().setValue("password1");
 
         //then
         Assertions.assertThat(model.cannotLogin().getValue()).isTrue();
@@ -47,8 +47,8 @@ public class LoginViewModelTest {
         //given
         LoginViewModel model = new LoginViewModel(new UserAuthentiactor(),() -> {});
         //when
-        model.username().setValue("user1");
-        model.password().setValue("pas");
+        model.usernameProperty().setValue("user1");
+        model.passwordProperty().setValue("pas");
 
         //then
         Assertions.assertThat(model.cannotLogin().getValue()).isTrue();
@@ -59,8 +59,8 @@ public class LoginViewModelTest {
         //given
         LoginViewModel model = new LoginViewModel(new UserAuthentiactor(),() -> {});
         //when
-        model.username().setValue("user1");
-        model.password().setValue("passwo");
+        model.usernameProperty().setValue("user1");
+        model.passwordProperty().setValue("passwo");
 
         //then
         Assertions.assertThat(model.cannotLogin().getValue()).isTrue();
@@ -71,8 +71,8 @@ public class LoginViewModelTest {
         //given
         LoginViewModel model = new LoginViewModel(new UserAuthentiactor(),() -> {});
         //when
-        model.username().setValue("us");
-        model.password().setValue("password1");
+        model.usernameProperty().setValue("us");
+        model.passwordProperty().setValue("password1");
 
         //then
         Assertions.assertThat(model.cannotLogin().getValue()).isTrue();
@@ -83,8 +83,8 @@ public class LoginViewModelTest {
         //given
         LoginViewModel model = new LoginViewModel(new UserAuthentiactor(),() -> {});
         //when
-        model.username().setValue("user12345123451234512345123451212345");
-        model.password().setValue("password1");
+        model.usernameProperty().setValue("user12345123451234512345123451212345");
+        model.passwordProperty().setValue("password1");
 
         //then
         Assertions.assertThat(model.cannotLogin().getValue()).isTrue();

@@ -132,8 +132,5 @@ public class LoginViewModel {
         return shouldShowUsernameHint;
     }
 
-    public Property<String> username(){return username;}
-
-    public Property<String> password(){return password;}
 
 }

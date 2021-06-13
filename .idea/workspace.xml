@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/loginview/LoginViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/loginview/LoginViewModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,7 @@
       <recent name="projekt.movielistview" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsNull">
+  <component name="RunManager" selected="Gradle.MovieListViewModelTest">
     <configuration name="FxApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="projekt.FxApplicationRunner" />
       <module name="projekt.app.main" />
@@ -218,11 +214,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MovieListViewModelTest" />
         <item itemvalue="Gradle.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsNull" />
         <item itemvalue="Gradle.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsEmpty" />
         <item itemvalue="Gradle.MovieListViewModelTest.adminToolsDontEnableForUser" />
         <item itemvalue="Application.FxApplicationRunner" />
-        <item itemvalue="Gradle.MovieListViewModelTest" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623518088196</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="movielistmodule tests">
+      <created>1623612513175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623612513175</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -4,13 +4,15 @@ import junit.framework.TestCase;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import projekt.movielistview.MovieListViewModel;
+import projekt.utils.MovieTitle;
 
 public class MovieListViewModelTest {
 
     @Test
     public void AddPositionDontEnableWhenAllTextFieldsIsEmpty() {
         //given
-        MovieListViewModel model = new MovieListViewModel(true);
+        MovieTitle movieTitle = new MovieTitle();
+        MovieListViewModel model = new MovieListViewModel(true,movieTitle ,() -> {});
         //when
         model.getTitleArea().setValue("");
         model.getDirectorArea().setValue("");
@@ -22,7 +24,8 @@ public class MovieListViewModelTest {
     @Test
     public void AddPositionDontEnableWhenOneOfTheTextFieldsIsEmpty() {
         //given
-        MovieListViewModel model = new MovieListViewModel(true);
+        MovieTitle movieTitle = new MovieTitle();
+        MovieListViewModel model = new MovieListViewModel(true,movieTitle ,() -> {});
         //when
         model.getTitleArea().setValue("aaa");
         model.getDirectorArea().setValue("aaa");
@@ -35,7 +38,8 @@ public class MovieListViewModelTest {
     @Test
     public void AddPositionDontEnableWhenOneOfTheTextFieldsIsNull() {
         //given
-        MovieListViewModel model = new MovieListViewModel(true);
+        MovieTitle movieTitle = new MovieTitle();
+        MovieListViewModel model = new MovieListViewModel(true,movieTitle ,() -> {});
         //when
         model.getTitleArea().setValue("sdasd");
         model.getDirectorArea().setValue(null);
@@ -45,15 +49,6 @@ public class MovieListViewModelTest {
         Assertions.assertThat(model.cannotAddPosition().getValue()).isTrue();
     }
 
-    @Test
-    public void Reader() {
-        //given
-        MovieListViewModel model = new MovieListViewModel(true);
-        //when
-        model.readMovies();
-        //then
-        Assertions.assertThat(model.cannotAddPosition().getValue()).isTrue();
-    }
 
 
 

@@ -9,3 +9,5 @@
 
 rootProject.name = 'projekt'
 include('app')
+include 'test'
+

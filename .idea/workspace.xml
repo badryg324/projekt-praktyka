@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/read/Reader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <disabled>
       <disabled_changelists>
@@ -49,7 +45,29 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="projekt" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="projekt" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="projekt" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="projekt" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="distribution" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -60,6 +78,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -90,12 +109,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
@@ -104,21 +127,17 @@
       <recent name="D:\JavaProjects\projekt-praktyka\app\src\main\resources" />
       <recent name="D:\JavaProjects\projekt-praktyka\app\src\main\java\projekt\hallview" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="loginview" />
+      <recent name="projekt.loginview" />
+      <recent name="projekt.tests.loginview" />
+      <recent name="projekt.tests" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.FxApplicationRunner">
-    <configuration name="FxApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="projekt.FxApplicationRunner" />
-      <module name="projekt.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="projekt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.LoginViewModelTest">
     <configuration name="UserAuthentiactor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="projekt.authentication.UserAuthentiactor" />
       <module name="projekt.app.main" />
@@ -132,18 +151,79 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="LoginViewModelTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;loginview.LoginViewModelTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginViewModelTest.name" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;loginview.LoginViewModelTest.name&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="projekt-praktyka [assembleDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assembleDist" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="projekt-praktyka:app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -168,9 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LoginViewModelTest" />
+        <item itemvalue="Gradle.LoginViewModelTest.name" />
+        <item itemvalue="Gradle.projekt-praktyka [assembleDist]" />
         <item itemvalue="Gradle.projekt-praktyka:app [clean]" />
         <item itemvalue="Application.UserAuthentiactor" />
-        <item itemvalue="Application.FxApplicationRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +268,10 @@
       <workItem from="1623519080609" duration="346000" />
       <workItem from="1623519820673" duration="735000" />
       <workItem from="1623520642850" duration="1705000" />
-      <workItem from="1623572935696" duration="19577000" />
+      <workItem from="1623572935696" duration="22567000" />
+      <workItem from="1623605756572" duration="97000" />
+      <workItem from="1623605987282" duration="342000" />
+      <workItem from="1623606368976" duration="2324000" />
     </task>
     <task id="LOCAL-00001" summary="added login">
       <created>1623513488702</created>
@@ -202,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623518088196</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="reader/writer movieList">
+      <created>1623602445210</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623602445210</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

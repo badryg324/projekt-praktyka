@@ -5,10 +5,7 @@ import io.reactivex.rxjavafx.schedulers.JavaFxScheduler;
 import io.reactivex.schedulers.Schedulers;
 import javafx.application.Platform;
 import javafx.beans.binding.BooleanBinding;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 import javafx.beans.value.ObservableBooleanValue;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TextField;
@@ -20,8 +17,8 @@ import java.io.IOException;
 public class LoginViewModel {
     private final UserAuthentiactor userAuthenticator;
 
-    private final StringProperty username ;
-    private final StringProperty password ;
+    private final StringProperty username;
+    private final StringProperty password;
     private final BooleanProperty loginInProgress ;
     private final BooleanProperty cannotChangeUsername;
     private final BooleanProperty cannotChangePassword;
@@ -134,4 +131,9 @@ public class LoginViewModel {
     public ObservableValue<Boolean> shouldShowUsernameHint() {
         return shouldShowUsernameHint;
     }
+
+    public Property<String> username(){return username;}
+
+    public Property<String> password(){return password;}
+
 }

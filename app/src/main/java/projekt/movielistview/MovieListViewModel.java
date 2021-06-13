@@ -79,14 +79,19 @@ public class MovieListViewModel {
     public ObservableValue<VBox> refreshPositionObservable() {return refreshPositionObservable();}
 
     public void addPosition() {
+        File movieFile = new File("app/src/main/resources/movies/"+ titleArea.get()+".txt");
 
         try{
             FileWriter fw=new FileWriter("app/src/main/resources/movieList.txt",StandardCharsets.UTF_8, true); //getClass().getResource("/movieList.txt").getPath()
             fw.write(titleArea.get()+";"+directorArea.get()+";"+hallArea.get()+";"+dateArea.get()+";"+System.getProperty( "line.separator" ));
             fw.close();
+            fw = new FileWriter(movieFile,StandardCharsets.UTF_8, true);
+            for(int i=0;i<30;i++){
+                fw.write(0+System.getProperty( "line.separator" ));
+            }
+            fw.close();
 
-        }catch(Exception e){System.out.println(e);}
-        System.out.println("Success...");
+        }catch(Exception e){System.out.println(e.getMessage());}
 
         readMovies();
     }

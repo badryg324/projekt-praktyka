@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f504f92b-3bba-4dd4-8c6c-0030a70a032e" name="Default Changelist" comment="added some stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="fixed MovieListView generating">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/utils/MovieTitle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
     </list>
+    <disabled>
+      <disabled_changelists>
+        <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="">
+          <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+          <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+          <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
+          <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
+        </list>
+      </disabled_changelists>
+      <disabled_trackers />
+    </disabled>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +91,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
@@ -113,6 +130,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="projekt-praktyka:app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -141,16 +169,16 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FxApplicationRunner" />
         <item itemvalue="Gradle.projekt-praktyka:app [clean]" />
         <item itemvalue="Application.UserAuthentiactor" />
+        <item itemvalue="Application.FxApplicationRunner" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f504f92b-3bba-4dd4-8c6c-0030a70a032e" name="Default Changelist" comment="" />
+      <changelist id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="" />
       <created>1623493052669</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -159,8 +187,7 @@
       <workItem from="1623519080609" duration="346000" />
       <workItem from="1623519820673" duration="735000" />
       <workItem from="1623520642850" duration="1705000" />
-      <workItem from="1623576694400" duration="74000" />
-      <workItem from="1623580244624" duration="1809000" />
+      <workItem from="1623572935696" duration="19577000" />
     </task>
     <task id="LOCAL-00001" summary="added login">
       <created>1623513488702</created>
@@ -176,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623518088196</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dunno lol">
+      <created>1623603965624</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623603965624</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed MovieListView generating">
+      <created>1623608646793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623608646793</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +238,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added login" />
     <MESSAGE value="added admin check" />
-    <option name="LAST_COMMIT_MESSAGE" value="added admin check" />
+    <MESSAGE value="dunno lol" />
+    <MESSAGE value="fixed MovieListView generating" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed MovieListView generating" />
   </component>
 </project>

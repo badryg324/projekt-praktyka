@@ -2,6 +2,9 @@ package projekt.movielistview;
 
 
 
+import io.reactivex.Completable;
+import io.reactivex.rxjavafx.schedulers.JavaFxScheduler;
+import io.reactivex.schedulers.Schedulers;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.*;
 import javafx.beans.value.ObservableValue;
@@ -12,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import projekt.utils.MovieTitle;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -23,6 +27,8 @@ public class MovieListViewModel {
     private final StringProperty directorArea;
     private final StringProperty hallArea ;
     private final StringProperty dateArea ;
+    private final MovieTitle movieTitle;
+    private final Runnable onMovieSelected;
     //private final ListProperty boxes;
 
 
@@ -33,8 +39,10 @@ public class MovieListViewModel {
     public ObservableList<Node> movieList = FXCollections.<Node>observableArrayList();
 
 
-    public MovieListViewModel(boolean isAdmin) {
+    public MovieListViewModel(boolean isAdmin, MovieTitle movieTitle, Runnable onMovieSelected) {
         this.isAdmin = new SimpleBooleanProperty(isAdmin);
+        this.movieTitle = movieTitle;
+        this.onMovieSelected = onMovieSelected;
         titleArea = new SimpleStringProperty();
         directorArea = new SimpleStringProperty();
         hallArea = new SimpleStringProperty();
@@ -117,7 +125,8 @@ public class MovieListViewModel {
                 HBox movie = new HBox();
 
                 Button openMovieButton = new Button("Rezerwuj");
-                openMovieButton.setOnAction(event -> openHallView());
+                String finalTitle = title;
+                openMovieButton.setOnAction(event ->openHallView(finalTitle));
 
                 movie.getChildren().addAll(openMovieButton, new Label(title), new Label(director), new Label(hall), new Label(date), new Button("Delete"));
                 movieList.add(movie);
@@ -131,8 +140,9 @@ public class MovieListViewModel {
 
     }
 
-    private void openHallView(){
-        System.out.println("BANG");
+    private void openHallView(String title){
+        this.movieTitle.setValue(title);
+        onMovieSelected.run();
     }
 }
 

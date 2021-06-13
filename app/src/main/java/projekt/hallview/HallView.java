@@ -18,7 +18,7 @@ public class HallView {
 
         Button buyTicket = new Button("Buy Ticket");
         Button goFuckYourSelf = new Button("NWM");
-
+        goFuckYourSelf.textProperty().bind(viewModel.movieTitle);
 
         // Binding z danymi z ViewModel'u
        // usernameTextField.textProperty().bindBidirectional(viewModel.usernameProperty());

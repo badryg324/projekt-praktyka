@@ -1,10 +1,13 @@
 package projekt.hallview;
 
 import javafx.stage.Stage;
+import projekt.utils.MovieTitle;
 
 
 public class HallViewFactory {
-    public HallView create (HallViewModel viewModel, Stage stage) {
-        return new HallView(viewModel,stage);
+
+    public HallView create(Stage mainWindowStage, MovieTitle movieTitle, Runnable onReturnToListClicked) {
+        HallViewModel viewModel = new HallViewModel(movieTitle,onReturnToListClicked);
+        return new HallView(viewModel,mainWindowStage);
     }
 }

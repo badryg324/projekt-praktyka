@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d14afc-78fb-47f3-bc6c-1296cfc3c8f0" name="Default Changelist" comment="added movie files generating">
+    <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/css/login-view-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/css/movie-list-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/utils/MovieTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/utils/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/css/hall-view-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/css/hall-view-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +50,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit3 Test Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -80,11 +81,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -115,6 +118,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

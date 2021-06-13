@@ -133,14 +133,16 @@ public class MovieListViewModel {
                 String finalDate = date;
                 openMovieButton.setOnAction(event ->openHallView(finalTitle, finalDirector, finalHall, finalDate));
 
+
                 Button deleteButton = new Button("Delete");
+                deleteButton.getStyleClass().add("deleteButton");
                 deleteButton.visibleProperty().bind(isAdmin);
                 deleteButton.managedProperty().bind(isAdmin);
                 int finalCounter = counter;
                 deleteButton.setOnAction(event -> deleteMovie(finalCounter));
 
 
-                movie.getChildren().addAll(openMovieButton, new Label(title), new Label(director), new Label(hall), new Label(date), deleteButton);
+                movie.getChildren().addAll(openMovieButton, new Label(" <--"+title+" "), new Label(director+" "), new Label(hall+" "), new Label(date+" "), deleteButton);
                 movieList.add(movie);
                 counter++;
 

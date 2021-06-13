@@ -1,0 +1,261 @@
+Index: app/src/main/java/projekt/hallview/HallView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package projekt.hallview;\r\n\r\nimport javafx.geometry.Insets;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.layout.*;\r\nimport javafx.stage.Stage;\r\n\r\npublic class HallView {\r\n    public HallView(HallViewModel viewModel, Stage stage)  {\r\n\r\n        Label checkField= new Label();\r\n        //PasswordField passwordField = new PasswordField();\r\n        Button logout = new Button(\"Logout\");\r\n        Button exitButton = new Button(\"Exit\");\r\n        Button returnButton = new Button(\"Return\");\r\n\r\n        Button buyTicket = new Button(\"Buy Ticket\");\r\n        Button goFuckYourSelf = new Button(\"NWM\");\r\n        goFuckYourSelf.textProperty().bind(viewModel.movieTitle);\r\n\r\n        // Binding z danymi z ViewModel'u\r\n       // usernameTextField.textProperty().bindBidirectional(viewModel.usernameProperty());\r\n        //usernameTextField.disableProperty().bind(viewModel.cannotChangeUsername());\r\n\r\n        //passwordField.textProperty().bindBidirectional(viewModel.passwordProperty());\r\n        //passwordField.disableProperty().bind(viewModel.cannotChangePassword());\r\n\r\n        //loginButton.disableProperty().bind(viewModel.cannotLogin());\r\n        //loginButton.setOnAction(event -> viewModel.loginClicked());\r\n\r\n        //cancelButton.setOnAction(event -> viewModel.cancelLoginClicked());\r\n        // Layout i ustawienie\r\n        GridPane formLayout = new GridPane();\r\n\r\n        formLayout.setHgap(5);\r\n        formLayout.setVgap(5);\r\n\r\n        formLayout.setPrefSize(200, 200);\r\n        formLayout.setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);\r\n\r\n        ColumnConstraints column1 = new ColumnConstraints(100,100,Double.MAX_VALUE);\r\n        column1.setHgrow(Priority.ALWAYS);\r\n        ColumnConstraints column2 = new ColumnConstraints(100);\r\n        formLayout.getColumnConstraints().addAll(column1, column1, column1, column1, column1, column1);\r\n\r\n        Button button1 = new Button(\"1\");\r\n        Button button2 = new Button(\"2\");\r\n        Button button3 = new Button(\"3\");\r\n        Button button4 = new Button(\"4\");\r\n        Button button5 = new Button(\"5\");\r\n        Button button6 = new Button(\"6\");\r\n        Button button7 = new Button(\"7\");\r\n        Button button8 = new Button(\"8\");\r\n        Button button9 = new Button(\"9\");\r\n        Button button10 = new Button(\"10\");\r\n        Button button11 = new Button(\"1\");\r\n        Button button12 = new Button(\"12\");\r\n        Button button13 = new Button(\"13\");\r\n        Button button14 = new Button(\"14\");\r\n        Button button15 = new Button(\"15\");\r\n        Button button16 = new Button(\"16\");\r\n        Button button17 = new Button(\"17\");\r\n        Button button18 = new Button(\"18\");\r\n        Button button19 = new Button(\"19\");\r\n        Button button20 = new Button(\"20\");\r\n        Button button21 = new Button(\"21\");\r\n        Button button22 = new Button(\"22\");\r\n        Button button23 = new Button(\"23\");\r\n        Button button24 = new Button(\"24\");\r\n        Button button25 = new Button(\"25\");\r\n        Button button26 = new Button(\"26\");\r\n        Button button27 = new Button(\"27\");\r\n        Button button28 = new Button(\"28\");\r\n        Button button29 = new Button(\"29\");\r\n        Button button30 = new Button(\"30\");\r\n\r\n\r\n\r\n\r\n        formLayout.add(button1, 0, 0, 1, 1);\r\n        formLayout.add(button2, 1, 0, 1, 1);\r\n        formLayout.add(button3, 2, 0, 1, 1);\r\n        formLayout.add(button4, 3, 0, 1, 1);\r\n        formLayout.add(button5, 4, 0, 1, 1);\r\n        formLayout.add(button6, 5, 0, 1, 1);\r\n        formLayout.add(button7, 0, 1, 1, 1);\r\n        formLayout.add(button8, 1, 1, 1, 1);\r\n        formLayout.add(button9, 2, 1, 1, 1);\r\n        formLayout.add(button10, 3, 1, 1, 1);\r\n        formLayout.add(button11, 4, 1, 1, 1);\r\n        formLayout.add(button12, 5, 1, 1, 1);\r\n        formLayout.add(button13, 0, 2, 1, 1);\r\n        formLayout.add(button14, 1, 2, 1, 1);\r\n        formLayout.add(button15, 2, 2, 1, 1);\r\n        formLayout.add(button16, 3, 2, 1, 1);\r\n        formLayout.add(button17, 4, 2, 1, 1);\r\n        formLayout.add(button18, 5, 2, 1, 1);\r\n        formLayout.add(button19, 0, 3, 1, 1);\r\n        formLayout.add(button20, 1, 3, 1, 1);\r\n        formLayout.add(button21, 2, 3, 1, 1);\r\n        formLayout.add(button22, 3, 3, 1, 1);\r\n        formLayout.add(button23, 4, 3, 1, 1);\r\n        formLayout.add(button24, 5, 3, 1, 1);\r\n        formLayout.add(button25, 0, 4, 1, 1);\r\n        formLayout.add(button26, 1, 4, 1, 1);\r\n        formLayout.add(button27, 2, 4, 1, 1);\r\n        formLayout.add(button28, 3, 4, 1, 1);\r\n        formLayout.add(button29, 4, 4, 1, 1);\r\n        formLayout.add(button30, 5, 4, 1, 1);\r\n\r\n\r\n\r\n\r\n        //\r\n        HBox menu = new HBox();\r\n        menu.getChildren().addAll(returnButton,exitButton, logout);\r\n\r\n\r\n        VBox rightBar = new VBox();\r\n        rightBar.getChildren().addAll(buyTicket,goFuckYourSelf);\r\n\r\n        HBox center = new HBox();\r\n        center.getChildren().addAll(formLayout,rightBar);\r\n\r\n\r\n        // Layout\r\n        VBox layout = new VBox();\r\n        layout.setPadding(new Insets(10));\r\n        layout.setSpacing(5);\r\n        layout.getChildren().addAll(menu,checkField,center);\r\n\r\n        Scene hallScene = new Scene(layout);\r\n        hallScene.getStylesheets().add(\"css/hall-view-style.css\");\r\n        stage.setScene(hallScene);\r\n        stage.show();\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/projekt/hallview/HallView.java b/app/src/main/java/projekt/hallview/HallView.java
+--- a/app/src/main/java/projekt/hallview/HallView.java	(revision 981e3c99375eabed67198f0d5b4c167458c66061)
++++ b/app/src/main/java/projekt/hallview/HallView.java	(date 1623618228773)
+@@ -34,16 +34,17 @@
+         // Layout i ustawienie
+         GridPane formLayout = new GridPane();
+ 
++
+         formLayout.setHgap(5);
+         formLayout.setVgap(5);
+ 
+         formLayout.setPrefSize(200, 200);
+         formLayout.setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
+ 
+-        ColumnConstraints column1 = new ColumnConstraints(100,100,Double.MAX_VALUE);
+-        column1.setHgrow(Priority.ALWAYS);
+-        ColumnConstraints column2 = new ColumnConstraints(100);
+-        formLayout.getColumnConstraints().addAll(column1, column1, column1, column1, column1, column1);
++       // ColumnConstraints column1 = new ColumnConstraints(100,100,Double.MAX_VALUE);
++       // column1.setHgrow(Priority.ALWAYS);
++        //ColumnConstraints column2 = new ColumnConstraints(100);
++       // formLayout.getColumnConstraints().addAll(column1, column1, column1, column1, column1, column1);
+ 
+         Button button1 = new Button("1");
+         Button button2 = new Button("2");
+@@ -125,6 +126,9 @@
+         center.getChildren().addAll(formLayout,rightBar);
+ 
+ 
++
++
++
+         // Layout
+         VBox layout = new VBox();
+         layout.setPadding(new Insets(10));
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2bfe761d-4238-40e6-9300-8a2fe3f3ea4c\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <task path=\"$PROJECT_DIR$/app\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand />\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"JUnit3 Test Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1tqOFqTPfBzRMRfOgGBK8zvD3J8\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollFromSource\" value=\"true\" />\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary\" value=\"JUnit3\" />\r\n    <property name=\"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3\" value=\"junit.framework.TestCase\" />\r\n    <property name=\"last_directory_selection\" value=\"$PROJECT_DIR$/app/src/test/java\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.settingsdialog.project.gradle\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\JavaProjects\\projekt-praktyka\\app\\src\\main\\resources\\css\" />\r\n      <recent name=\"D:\\JavaProjects\\projekt-praktyka\\app\\src\\main\\resources\" />\r\n      <recent name=\"D:\\JavaProjects\\projekt-praktyka\\app\\src\\main\\java\\projekt\\hallview\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.Recents.Supers\">\r\n      <recent name=\"junit.framework.TestCase\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.RecentsKey\">\r\n      <recent name=\"movielistview\" />\r\n      <recent name=\"projekt.movielistview\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Gradle.MovieListViewModelTest\">\r\n    <configuration name=\"FxApplicationRunner\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"projekt.FxApplicationRunner\" />\r\n      <module name=\"projekt.app.main\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"projekt.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"ArquillianJUnit\" factoryName=\"\" nameIsGenerated=\"true\">\r\n      <option name=\"arquillianRunConfiguration\">\r\n        <value>\r\n          <option name=\"containerStateName\" value=\"\" />\r\n        </value>\r\n      </option>\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MovieListViewModelTest\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"--tests &quot;movielistview.MovieListViewModelTest&quot;\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":app:test\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsEmpty\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"--tests &quot;movielistview.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsEmpty&quot;\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":app:test\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsNull\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"--tests &quot;movielistview.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsNull&quot;\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":app:test\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"MovieListViewModelTest.adminToolsDontEnableForUser\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"--tests &quot;movielistview.MovieListViewModelTest.adminToolsDontEnableForUser&quot;\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":app:test\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Gradle.MovieListViewModelTest\" />\r\n      <item itemvalue=\"Gradle.MovieListViewModelTest.adminToolsDontEnableForUser\" />\r\n      <item itemvalue=\"Application.FxApplicationRunner\" />\r\n      <item itemvalue=\"Gradle.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsEmpty\" />\r\n      <item itemvalue=\"Gradle.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsNull\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Gradle.MovieListViewModelTest\" />\r\n        <item itemvalue=\"Gradle.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsNull\" />\r\n        <item itemvalue=\"Gradle.MovieListViewModelTest.AddPositionDontEnableWhenOneOfTheTextFieldsIsEmpty\" />\r\n        <item itemvalue=\"Gradle.MovieListViewModelTest.adminToolsDontEnableForUser\" />\r\n        <item itemvalue=\"Application.FxApplicationRunner\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f504f92b-3bba-4dd4-8c6c-0030a70a032e\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1623493052669</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1623493052669</updated>\r\n      <workItem from=\"1623493054143\" duration=\"22011000\" />\r\n      <workItem from=\"1623519080609\" duration=\"346000\" />\r\n      <workItem from=\"1623519820673\" duration=\"735000\" />\r\n      <workItem from=\"1623520642850\" duration=\"1705000\" />\r\n      <workItem from=\"1623576694400\" duration=\"74000\" />\r\n      <workItem from=\"1623580244624\" duration=\"1809000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"added login\">\r\n      <created>1623513488702</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1623513488702</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"added admin check\">\r\n      <created>1623518088196</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1623518088196</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"movielistmodule tests\">\r\n      <created>1623612513175</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1623612513175</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"added login\" />\r\n    <MESSAGE value=\"added admin check\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"added admin check\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 981e3c99375eabed67198f0d5b4c167458c66061)
++++ b/.idea/workspace.xml	(date 1623616986696)
+@@ -5,8 +5,13 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="">
++      <change afterPath="$PROJECT_DIR$/app/src/main/resources/css/movie-list-style.css" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/movielistview/MovieListViewModelTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginView.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/resources/css/hall-view-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/css/hall-view-style.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -41,6 +46,7 @@
+       <list>
+         <option value="Class" />
+         <option value="JUnit3 Test Class" />
++        <option value="CSS File" />
+       </list>
+     </option>
+   </component>
+@@ -76,6 +82,7 @@
+     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
+     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java" />
++    <property name="list.type.of.created.stylesheet" value="CSS" />
+     <property name="nodejs_package_manager_path" value="npm" />
+     <property name="project.structure.last.edited" value="Project" />
+     <property name="project.structure.proportion" value="0.0" />
+@@ -96,7 +103,7 @@
+       <recent name="projekt.movielistview" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Gradle.MovieListViewModelTest">
++  <component name="RunManager" selected="Application.FxApplicationRunner">
+     <configuration name="FxApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="projekt.FxApplicationRunner" />
+       <module name="projekt.app.main" />
+@@ -258,7 +265,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1623612513175</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="movielistmodule tests fix">
++      <created>1623613606034</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1623613606034</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+Index: app/src/main/java/projekt/loginview/LoginView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package projekt.loginview;\r\n\r\nimport javafx.geometry.HPos;\r\nimport javafx.geometry.Insets;\r\nimport javafx.geometry.Pos;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.control.PasswordField;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.layout.ColumnConstraints;\r\nimport javafx.scene.layout.GridPane;\r\nimport javafx.scene.layout.HBox;\r\nimport javafx.scene.layout.Priority;\r\nimport javafx.scene.layout.VBox;\r\nimport javafx.stage.Stage;\r\n\r\npublic class LoginView {\r\n    public LoginView(LoginViewModel viewModel, Stage stage) {\r\n        TextField usernameTextField = new TextField();\r\n        PasswordField passwordField = new PasswordField();\r\n        Label usernameHintLabel = new Label();\r\n        Label passwordHintLabel = new Label();\r\n        Button loginButton = new Button(\"Login\");\r\n        Button cancelButton = new Button(\"Cancel\");\r\n\r\n        // Binding z danymi z ViewModel'u\r\n        usernameTextField.textProperty().bindBidirectional(viewModel.usernameProperty());\r\n        usernameTextField.disableProperty().bind(viewModel.cannotChangeUsername());\r\n\r\n        passwordField.textProperty().bindBidirectional(viewModel.passwordProperty());\r\n        passwordField.disableProperty().bind(viewModel.cannotChangePassword());\r\n\r\n        usernameHintLabel.textProperty().bind(viewModel.usernameHint());\r\n        usernameHintLabel.visibleProperty().bind(viewModel.shouldShowUsernameHint());\r\n        usernameHintLabel.managedProperty().bind(viewModel.shouldShowUsernameHint());\r\n\r\n        passwordHintLabel.textProperty().bind(viewModel.passwordHint());\r\n        passwordHintLabel.visibleProperty().bind(viewModel.shouldShowPasswordHint());\r\n        passwordHintLabel.managedProperty().bind(viewModel.shouldShowPasswordHint());\r\n\r\n        loginButton.disableProperty().bind(viewModel.cannotLogin());\r\n        loginButton.setOnAction(event -> viewModel.loginClicked());\r\n\r\n        cancelButton.setOnAction(event -> viewModel.cancelLoginClicked());\r\n\r\n        // Layout i ustawienie\r\n        GridPane formLayout = new GridPane();\r\n        formLayout.addRow(formLayout.getRowCount(), new Label(\"Username:\"), new VBox(usernameTextField, usernameHintLabel));\r\n        formLayout.addRow(formLayout.getRowCount(), new Label(\"Password:\"), new VBox(passwordField, passwordHintLabel));\r\n        formLayout.setHgap(5);\r\n        formLayout.setVgap(5);\r\n\r\n        ColumnConstraints leftColumn = new ColumnConstraints();\r\n        leftColumn.setHalignment(HPos.RIGHT);\r\n        formLayout.getColumnConstraints().addAll(leftColumn);\r\n\r\n        GridPane.setHgrow(usernameTextField, Priority.ALWAYS);\r\n        GridPane.setHgrow(passwordField, Priority.ALWAYS);\r\n\r\n        // Przyciski\r\n        HBox buttons = new HBox();\r\n        buttons.setSpacing(5);\r\n        buttons.setAlignment(Pos.BASELINE_RIGHT);\r\n        buttons.getChildren().addAll(cancelButton, loginButton);\r\n\r\n        // Layout\r\n        VBox layout = new VBox();\r\n        layout.setPadding(new Insets(10));\r\n        layout.setSpacing(5);\r\n        layout.getChildren().addAll(formLayout, buttons);\r\n\r\n        stage.setScene(new Scene(layout));\r\n        stage.show();\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/projekt/loginview/LoginView.java b/app/src/main/java/projekt/loginview/LoginView.java
+--- a/app/src/main/java/projekt/loginview/LoginView.java	(revision 981e3c99375eabed67198f0d5b4c167458c66061)
++++ b/app/src/main/java/projekt/loginview/LoginView.java	(date 1623616018199)
+@@ -48,6 +48,10 @@
+         GridPane formLayout = new GridPane();
+         formLayout.addRow(formLayout.getRowCount(), new Label("Username:"), new VBox(usernameTextField, usernameHintLabel));
+         formLayout.addRow(formLayout.getRowCount(), new Label("Password:"), new VBox(passwordField, passwordHintLabel));
++
++        usernameTextField.setMaxHeight(Double.MAX_VALUE);
++        passwordField.setMaxWidth(Double.MAX_VALUE);
++
+         formLayout.setHgap(5);
+         formLayout.setVgap(5);
+ 
+@@ -70,6 +74,7 @@
+         layout.setSpacing(5);
+         layout.getChildren().addAll(formLayout, buttons);
+ 
++
+         stage.setScene(new Scene(layout));
+         stage.show();
+     }
+Index: app/src/main/java/projekt/movielistview/MovieListView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package projekt.movielistview;\r\n\r\nimport javafx.beans.binding.Bindings;\r\nimport javafx.beans.binding.ListBinding;\r\nimport javafx.geometry.Insets;\r\nimport javafx.scene.Node;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.layout.HBox;\r\nimport javafx.scene.layout.VBox;\r\nimport javafx.stage.Stage;\r\n\r\n\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\nimport java.io.BufferedReader;\r\nimport java.io.IOException;\r\nimport java.io.InputStreamReader;\r\nimport java.nio.charset.StandardCharsets;\r\nimport java.util.ArrayList;\r\n\r\npublic class MovieListView {\r\n    public MovieListView(MovieListViewModel viewModel, Stage stage) {\r\n\r\n\r\n        VBox scene = new VBox();\r\n\r\n        Label header = new Label(\"Upcoming films:\");\r\n        scene.getChildren().add(header);\r\n\r\n        VBox movies = new VBox();\r\n\r\n        scene.getChildren().add(movies);\r\n\r\n\r\n        VBox adminUsage = new VBox();\r\n\r\n        TextField titleArea = new TextField();\r\n        titleArea.setPromptText(\"Title\");\r\n        TextField directorArea = new TextField();\r\n        directorArea.setPromptText(\"Director\");\r\n        TextField hallArea = new TextField();\r\n        hallArea.setPromptText(\"Hall\");\r\n        TextField dateArea = new TextField();\r\n        dateArea.setPromptText(\"Date\");\r\n        Button addPosition = new Button(\"Add position\");\r\n\r\n        addPosition.disableProperty().bind(viewModel.cannotAddPosition());\r\n        addPosition.setOnAction(event -> viewModel.addPosition());\r\n\r\n\r\n        HBox adminVariables = new HBox();\r\n        adminVariables.getChildren().addAll(titleArea, directorArea, hallArea, dateArea, addPosition);\r\n\r\n        Label adminTools = new Label(\"Admin tools\");\r\n\r\n\r\n        adminUsage.getChildren().addAll(adminTools, adminVariables);\r\n        adminUsage.visibleProperty().bind(viewModel.isAdmin);\r\n        adminUsage.managedProperty().bind(viewModel.isAdmin);\r\n\r\n\r\n        scene.setPadding(new Insets(10));\r\n        scene.setSpacing(5);\r\n\r\n        scene.getChildren().add(adminUsage);\r\n\r\n        stage.setScene(new Scene(scene));\r\n        stage.show();\r\n\r\n\r\n        // bindings\r\n\r\n\r\n        titleArea.textProperty().bindBidirectional(viewModel.getTitleArea());\r\n        directorArea.textProperty().bindBidirectional(viewModel.getDirectorArea());\r\n        hallArea.textProperty().bindBidirectional(viewModel.getHallArea());\r\n        dateArea.textProperty().bindBidirectional(viewModel.getDateArea());\r\n        Bindings.bindContentBidirectional(viewModel.movieList, movies.getChildren());\r\n\r\n\r\n        viewModel.readMovies();\r\n\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/projekt/movielistview/MovieListView.java b/app/src/main/java/projekt/movielistview/MovieListView.java
+--- a/app/src/main/java/projekt/movielistview/MovieListView.java	(revision 981e3c99375eabed67198f0d5b4c167458c66061)
++++ b/app/src/main/java/projekt/movielistview/MovieListView.java	(date 1623617539621)
+@@ -9,6 +9,7 @@
+ import javafx.scene.control.Label;
+ import javafx.scene.control.TextField;
+ import javafx.scene.layout.HBox;
++import javafx.scene.layout.Priority;
+ import javafx.scene.layout.VBox;
+ import javafx.stage.Stage;
+ 
+@@ -25,14 +26,16 @@
+     public MovieListView(MovieListViewModel viewModel, Stage stage) {
+ 
+ 
+-        VBox scene = new VBox();
++        VBox layout = new VBox();
+ 
+         Label header = new Label("Upcoming films:");
+-        scene.getChildren().add(header);
++        layout.getChildren().add(header);
+ 
+         VBox movies = new VBox();
++        VBox.setVgrow(movies,Priority.ALWAYS);
+ 
+-        scene.getChildren().add(movies);
++
++        layout.getChildren().add(movies);
+ 
+ 
+         VBox adminUsage = new VBox();
+@@ -62,12 +65,15 @@
+         adminUsage.managedProperty().bind(viewModel.isAdmin);
+ 
+ 
+-        scene.setPadding(new Insets(10));
+-        scene.setSpacing(5);
+ 
+-        scene.getChildren().add(adminUsage);
++        layout.setPadding(new Insets(10));
++        layout.setSpacing(5);
+ 
+-        stage.setScene(new Scene(scene));
++        layout.getChildren().add(adminUsage);
++        Scene scene =new Scene(layout);
++
++        scene.getStylesheets().add("css/movie-list-style.css");
++        stage.setScene(scene);
+         stage.show();
+ 
+ 
+Index: app/src/main/resources/movieList.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>JankoMuzykant;RychuPeja;2137;21:37;\r\naaaa;aaa;aaa;aaa;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/resources/movieList.txt b/app/src/main/resources/movieList.txt
+--- a/app/src/main/resources/movieList.txt	(revision 981e3c99375eabed67198f0d5b4c167458c66061)
++++ b/app/src/main/resources/movieList.txt	(date 1623617561269)
+@@ -1,2 +1,5 @@
+ JankoMuzykant;RychuPeja;2137;21:37;
+ aaaa;aaa;aaa;aaa;
++asdas;asdasd;asd;asdas;
++asdsa;asd;asd;assd;
++asdsa;asd;asd;assd;
+Index: app/src/main/resources/css/movie-list-style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/resources/css/movie-list-style.css b/app/src/main/resources/css/movie-list-style.css
+new file mode 100644
+--- /dev/null	(date 1623617017413)
++++ b/app/src/main/resources/css/movie-list-style.css	(date 1623617017413)
+@@ -0,0 +1,6 @@
++.label{
++    padding-left: 15px;
++    padding-right: 15px;
++    font-family:Monospaced;
++    font-size: 16px;
++}
+Index: app/src/main/resources/css/hall-view-style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.button{\r\n    -fx-background-color:\r\n            #3c7fb1,\r\n            linear-gradient(#fafdfe, #e8f5fc),\r\n            linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);\r\n    -fx-background-insets: 0,1,2;\r\n    -fx-background-radius: 3,2,1;\r\n    -fx-padding: 3 30 3 30;\r\n    -fx-text-fill: black;\r\n    -fx-font-size: 14px;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/resources/css/hall-view-style.css b/app/src/main/resources/css/hall-view-style.css
+--- a/app/src/main/resources/css/hall-view-style.css	(revision 981e3c99375eabed67198f0d5b4c167458c66061)
++++ b/app/src/main/resources/css/hall-view-style.css	(date 1623618341437)
+@@ -1,11 +1,18 @@
+ .button{
+     -fx-background-color:
+-            #3c7fb1,
+-            linear-gradient(#fafdfe, #e8f5fc),
+-            linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
++            #929090,
++            linear-gradient(#fafdfe, #fce8ee),
++            linear-gradient(#eaf6fd 0%, #fad9fc 49%, #fdbee6 50%, #f5a7c9 100%);
+     -fx-background-insets: 0,1,2;
+     -fx-background-radius: 3,2,1;
+-    -fx-padding: 3 30 3 30;
++    -fx-padding: 30 30 30 30;
++    -fx-font-family: Monospaced;
+     -fx-text-fill: black;
+     -fx-font-size: 14px;
++    -fx-min-width: 80px;
++    -fx-max-width: 200px;
++
+ }
++.Scene{
++    -fx-background-color: silver
++}
+\ No newline at end of file

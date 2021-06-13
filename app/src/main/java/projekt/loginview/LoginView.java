@@ -13,12 +13,15 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class LoginView {
     public LoginView(LoginViewModel viewModel, Stage stage) {
         TextField usernameTextField = new TextField();
         PasswordField passwordField = new PasswordField();
+        Label greetings = new Label("Cinema Lublin<3");
+        greetings.getStyleClass().add("greetings");
         Label usernameHintLabel = new Label();
         Label passwordHintLabel = new Label();
         Button loginButton = new Button("Login");
@@ -48,6 +51,14 @@ public class LoginView {
         GridPane formLayout = new GridPane();
         formLayout.addRow(formLayout.getRowCount(), new Label("Username:"), new VBox(usernameTextField, usernameHintLabel));
         formLayout.addRow(formLayout.getRowCount(), new Label("Password:"), new VBox(passwordField, passwordHintLabel));
+
+
+        formLayout.setAlignment(Pos.BASELINE_CENTER);
+
+
+        usernameTextField.setMaxHeight(Double.MAX_VALUE);
+        passwordField.setMaxWidth(Double.MAX_VALUE);
+
         formLayout.setHgap(5);
         formLayout.setVgap(5);
 
@@ -61,16 +72,22 @@ public class LoginView {
         // Przyciski
         HBox buttons = new HBox();
         buttons.setSpacing(5);
-        buttons.setAlignment(Pos.BASELINE_RIGHT);
+        buttons.setAlignment(Pos.BASELINE_CENTER);
         buttons.getChildren().addAll(cancelButton, loginButton);
 
         // Layout
         VBox layout = new VBox();
         layout.setPadding(new Insets(10));
         layout.setSpacing(5);
-        layout.getChildren().addAll(formLayout, buttons);
+        layout.getChildren().addAll(greetings,formLayout, buttons);
 
-        stage.setScene(new Scene(layout));
+        Scene loginscene= new Scene(layout);
+
+        loginscene.getStylesheets().add("css/login-view-style.css");
+        stage.setScene(loginscene);
+        stage.setWidth(600);
+        stage.setHeight(200);
+
         stage.show();
     }
 }

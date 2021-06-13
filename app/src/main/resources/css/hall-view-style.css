@@ -1,11 +1,74 @@
+.root{
+    -fx-background-color: #bde7ac;
+}
 .button{
     -fx-background-color:
-            #3c7fb1,
-            linear-gradient(#fafdfe, #e8f5fc),
-            linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+            #929090,
+            linear-gradient(#e9e9e9, #aeaeae);
+
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
-    -fx-padding: 3 30 3 30;
+    -fx-padding: 30 30 30 30;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bolder;
     -fx-text-fill: black;
     -fx-font-size: 14px;
+    -fx-min-width: 80px;
+    -fx-max-width: 200px;
+}
+#buyTicket{
+    -fx-background-color:
+            #369936,
+            linear-gradient(#e9e9e9, #53c446);
+
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 30 30 30 30;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bolder;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-min-width: 80px;
+    -fx-max-width: 200px;
+
+}
+#hallRepresentation{
+    -fx-font-family: Monospaced;
+    -fx-font-size: 22px;
+    -fx-font-weight: bolder;
+    -fx-background-color: white;
+    -fx-padding: 10, 30, 10, 30;
+}
+
+.grid {
+    -fx-background-color: white;
+    -fx-background-radius: 5.0;
+    -fx-background-insets: 0.0 5.0 0.0 5.0;
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.menu{
+    -fx-alignment: center;
+}
+.menu.button{
+    -fx-background-color:
+            #929090,
+            linear-gradient(#e9e9e9, #aeaeae);
+
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 30 30 30 30;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bolder;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-min-width: 80px;
+    -fx-max-width: 100px;
+}
+.downbar{
+
+    -fx-alignment: center;
+    -fx-padding:30 0 0 0;
 }

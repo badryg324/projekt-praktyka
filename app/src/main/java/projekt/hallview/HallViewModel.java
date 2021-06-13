@@ -11,5 +11,20 @@ public class HallViewModel {
     public HallViewModel(Movie movie, Runnable onReturnToListClicked) {
         this.movieTitle = new SimpleStringProperty(movie.getValue());
         this.onReturnToListClicked = onReturnToListClicked;
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+    public void buyTicket() {
+
     }
 }

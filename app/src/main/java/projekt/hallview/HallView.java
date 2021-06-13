@@ -1,6 +1,7 @@
 package projekt.hallview;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,42 +11,40 @@ import javafx.stage.Stage;
 public class HallView {
     public HallView(HallViewModel viewModel, Stage stage)  {
 
-        Label checkField= new Label();
+
         //PasswordField passwordField = new PasswordField();
         Button logout = new Button("Logout");
         Button exitButton = new Button("Exit");
         Button returnButton = new Button("Return");
 
         Button buyTicket = new Button("Buy Ticket");
-        Button goFuckYourSelf = new Button("NWM");
+        buyTicket.setId("buyTicket");
+
+        Label goFuckYourSelf = new Label("NWM");
+        goFuckYourSelf.setId("hallRepresentation");
         goFuckYourSelf.textProperty().bind(viewModel.movieTitle);
 
         // Binding z danymi z ViewModel'u
-       // usernameTextField.textProperty().bindBidirectional(viewModel.usernameProperty());
-        //usernameTextField.disableProperty().bind(viewModel.cannotChangeUsername());
+        buyTicket.setOnAction(event -> viewModel.buyTicket());
 
-        //passwordField.textProperty().bindBidirectional(viewModel.passwordProperty());
-        //passwordField.disableProperty().bind(viewModel.cannotChangePassword());
 
-        //loginButton.disableProperty().bind(viewModel.cannotLogin());
-        //loginButton.setOnAction(event -> viewModel.loginClicked());
 
-        //cancelButton.setOnAction(event -> viewModel.cancelLoginClicked());
+
+
         // Layout i ustawienie
         GridPane formLayout = new GridPane();
+        formLayout.getStyleClass().add("grid");
 
-        formLayout.setHgap(5);
-        formLayout.setVgap(5);
-
-        formLayout.setPrefSize(200, 200);
+        //formLayout.setPrefSize(200, 200);
         formLayout.setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
 
-        ColumnConstraints column1 = new ColumnConstraints(100,100,Double.MAX_VALUE);
-        column1.setHgrow(Priority.ALWAYS);
-        ColumnConstraints column2 = new ColumnConstraints(100);
-        formLayout.getColumnConstraints().addAll(column1, column1, column1, column1, column1, column1);
+       // ColumnConstraints column1 = new ColumnConstraints(100,100,Double.MAX_VALUE);
+       // column1.setHgrow(Priority.ALWAYS);
+        //ColumnConstraints column2 = new ColumnConstraints(100);
+       // formLayout.getColumnConstraints().addAll(column1, column1, column1, column1, column1, column1);
 
         Button button1 = new Button("1");
+           // button1.setOnAction(event -> viewModel.checkIsFree(1));
         Button button2 = new Button("2");
         Button button3 = new Button("3");
         Button button4 = new Button("4");
@@ -75,8 +74,6 @@ public class HallView {
         Button button28 = new Button("28");
         Button button29 = new Button("29");
         Button button30 = new Button("30");
-
-
 
 
         formLayout.add(button1, 0, 0, 1, 1);
@@ -115,25 +112,35 @@ public class HallView {
 
         //
         HBox menu = new HBox();
+        menu.getStyleClass().add("menu");
         menu.getChildren().addAll(returnButton,exitButton, logout);
 
+        HBox filmname = new HBox();
+        filmname.setAlignment(Pos.CENTER);
+        filmname.getChildren().add(goFuckYourSelf);
 
-        VBox rightBar = new VBox();
-        rightBar.getChildren().addAll(buyTicket,goFuckYourSelf);
 
-        HBox center = new HBox();
-        center.getChildren().addAll(formLayout,rightBar);
+        HBox downBar = new HBox();
+        downBar.getStyleClass().add("downbar");
+        downBar.getChildren().addAll(buyTicket);
+
+        VBox center = new VBox();
+        center.getChildren().addAll(formLayout,downBar);
+
+
+
 
 
         // Layout
         VBox layout = new VBox();
         layout.setPadding(new Insets(10));
         layout.setSpacing(5);
-        layout.getChildren().addAll(menu,checkField,center);
+        layout.getChildren().addAll(menu,filmname,center);
 
         Scene hallScene = new Scene(layout);
         hallScene.getStylesheets().add("css/hall-view-style.css");
         stage.setScene(hallScene);
+        stage.sizeToScene();
         stage.show();
 
 

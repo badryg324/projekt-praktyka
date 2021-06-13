@@ -11,6 +11,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 
@@ -29,12 +30,17 @@ public class MovieListView {
         VBox scene = new VBox();
 
         Label header = new Label("Upcoming films:");
+        header.getStyleClass().add("upcoming");
         scene.getChildren().add(header);
 
         VBox movies = new VBox();
+        //movies.getStyleClass().add("vbox");
+        movies.setId("moviesList");
         //scene.getChildren().add(movies);
 
+
         ScrollPane moviesScrollPane = new ScrollPane();
+
         moviesScrollPane.setContent(movies);
         moviesScrollPane.setPrefHeight(400);
         scene.getChildren().add(moviesScrollPane);
@@ -88,6 +94,7 @@ public class MovieListView {
         viewModel.readMovies();
 
         stage.setScene(new Scene(scene));
+        scene.getStylesheets().add("css/movie-list-style.css");
         stage.sizeToScene();
         stage.setResizable(false);
         stage.show();

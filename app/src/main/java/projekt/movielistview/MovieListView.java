@@ -1,6 +1,8 @@
 package projekt.movielistview;
 
+import javafx.beans.binding.ListBinding;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,6 +11,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,8 +22,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class MovieListView {
-    public MovieListView(MovieListViewModel viewModel, Stage stage) {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/movieList.txt"), StandardCharsets.UTF_8));
+    public MovieListView(MovieListViewModel viewModel, Stage stage){
 
         String pom;
         String title;
@@ -32,6 +37,8 @@ public class MovieListView {
         greetings.getChildren().add(filmList);
         boxes.add(greetings);
 
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/movieList.txt"), StandardCharsets.UTF_8));
+
         try {
             while ((pom = bufferedReader.readLine()) != null) {
 
@@ -44,13 +51,22 @@ public class MovieListView {
                 date = pom.substring(0, pom.indexOf(';'));
 
                 HBox list = new HBox();
-                list.getChildren().addAll(new Button(" * "), new Label(title), new Label(director), new Label(hall), new Label(date), new Button("Delete"));
+
+                Button butt = new Button();
+                butt.setOnAction(event -> viewModel.addHallReference());
+
+                list.getChildren().addAll(butt, new Label(title), new Label(director), new Label(hall), new Label(date), new Button("Delete"));
                 boxes.add(list);
             }
             bufferedReader.close();
         } catch(IOException e){
             System.out.println("problem");
         }
+
+
+
+
+
 
 
 
@@ -66,6 +82,13 @@ public class MovieListView {
         TextField dateArea= new TextField();
         dateArea.setPromptText("Date");
         Button addPosition= new Button("Add position");
+
+        addPosition.disableProperty().bind(viewModel.cannotAddPosition());
+        addPosition.setOnAction(event -> viewModel.addPosition());
+
+
+
+
 
         HBox adminVariables = new HBox();
         adminVariables.getChildren().addAll(titleArea,directorArea,hallArea,dateArea,addPosition);
@@ -83,6 +106,11 @@ public class MovieListView {
 
 
 
+
+
+
+
+
         VBox layout = new VBox();
         layout.setPadding(new Insets(10));
         layout.setSpacing(5);
@@ -92,5 +120,22 @@ public class MovieListView {
         stage.setScene(new Scene(layout));
         stage.show();
 
+
+        // bindings
+
+
+
+        titleArea.textProperty().bindBidirectional(viewModel.getAreaProperty());
+        directorArea.textProperty().bindBidirectional(viewModel.getDirectorArea());
+        hallArea.textProperty().bindBidirectional(viewModel.getHallArea());
+        dateArea.textProperty().bindBidirectional(viewModel.getDateArea());
+
+
+
+
+
     }
+
+
+
 }

@@ -16,7 +16,7 @@ public class    FxApplication extends Application {
         UserAuthentiactor userAuthenticator = new UserAuthentiactor();
 
         router = new Router(
-                new LoginViewFactory(userAuthenticator),new MovieListViewFactory()
+                new LoginViewFactory(userAuthenticator),new MovieListViewFactory(), new HallViewFactory()
         );
     }
     @Override
@@ -24,16 +24,6 @@ public class    FxApplication extends Application {
 
         router.setMainWindowStage(primaryStage);
         router.showLoginView();
-
-       /* LoginViewFactory loginViewFactory = new LoginViewFactory(userAuthenticator);
-        LoginViewModel viewModel = new LoginViewModel(userAuthenticator, onUserAuthenticated);*/
-
-
-
-        /*HallViewFactory hallViewFactory = new HallViewFactory();
-        HallViewModel viewModel = new HallViewModel();
-
-        HallView hallView = hallViewFactory.create(viewModel, primaryStage);*/
 
     }
 }

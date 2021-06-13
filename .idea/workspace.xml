@@ -4,21 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f504f92b-3bba-4dd4-8c6c-0030a70a032e" name="Default Changelist" comment="added admin check">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/projekt/read/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/FxApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" afterDir="false" />
     </list>
+    <disabled>
+      <disabled_changelists>
+        <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="">
+          <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+          <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+          <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
+          <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
+        </list>
+      </disabled_changelists>
+      <disabled_trackers />
+    </disabled>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +177,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f504f92b-3bba-4dd4-8c6c-0030a70a032e" name="Default Changelist" comment="" />
+      <changelist id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="" />
       <created>1623493052669</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -177,6 +186,7 @@
       <workItem from="1623519080609" duration="346000" />
       <workItem from="1623519820673" duration="735000" />
       <workItem from="1623520642850" duration="1705000" />
+      <workItem from="1623572935696" duration="19577000" />
     </task>
     <task id="LOCAL-00001" summary="added login">
       <created>1623513488702</created>

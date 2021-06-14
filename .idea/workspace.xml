@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bfe761d-4238-40e6-9300-8a2fe3f3ea4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/css/login-view-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/css/movie-list-style.css" afterDir="false" />
+    <list default="true" id="14d14afc-78fb-47f3-bc6c-1296cfc3c8f0" name="Default Changelist" comment="cos">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_06_2021_23_26.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_06_2021_23_26.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/Router.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/hallview/HallViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/loginview/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/projekt/movielistview/MovieListViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/css/hall-view-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/css/hall-view-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/movieList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/movies/title1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/movies/title2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/movies/title3.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,17 +117,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -249,6 +237,7 @@
       <workItem from="1623576694400" duration="74000" />
       <workItem from="1623580244624" duration="1809000" />
       <workItem from="1623617629291" duration="36000" />
+      <workItem from="1623651270760" duration="5954000" />
     </task>
     <task id="LOCAL-00001" summary="added login">
       <created>1623513488702</created>

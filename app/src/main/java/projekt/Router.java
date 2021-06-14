@@ -45,7 +45,7 @@ public class Router {
     public void showHallView(){
         Runnable onReturnToListClicked = () ->{
             mainWindowStage.close();
-            showHallView();
+            showMoviesListView();
         };
         hallViewFactory.create(mainWindowStage, movie,onReturnToListClicked);
     }

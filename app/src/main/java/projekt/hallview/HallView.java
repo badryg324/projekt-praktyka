@@ -25,7 +25,7 @@ public class HallView {
         Button returnButton = new Button("Powrót");
         returnButton.setOnAction(event -> viewModel.returnToList());
 
-        Button reserveButton = new Button("Zarezerwuj miejsca");
+        Button reserveButton = new Button("Zarezerwuj");
         reserveButton.setId("buyTicket");
 
 
